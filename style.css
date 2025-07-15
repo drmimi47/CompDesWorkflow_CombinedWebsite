@@ -1,0 +1,124 @@
+/* Add this at the very top of your CSS file */
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px 20px; /* some horizontal padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* spread items left, center, right */
+  z-index: 1000;
+  box-shadow: none;
+  height: 70px; /* fixed height for the header */
+  box-sizing: border-box;
+}
+
+/* Left text */
+.header-left {
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #222;
+  font-family: Georgia, 'Times New Roman', Times; /* Left text font */
+}
+
+/* Center logo */
+.logo {
+  flex: 0 0 auto;
+  width: 100px;
+  height: auto;
+  margin: 0 20px;
+}
+
+/* Right text */
+.header-right {
+  flex: 1;
+  text-align: right;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #222;
+  font-family: Helvetica, sans-serif, monospace; /* Right text font */
+}
+
+/* Main Content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 20px 40px; /* enough top padding for fixed header */
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family: Helvetica, sans-serif, monospace; /* Right text font */
+
+}
+
+p a {
+  color: #000000;           /* Black color */
+  text-decoration: underline; /* Keeps underline */
+}
+
+p a:hover {
+  color: #000000;           /* Still black on hover */
+  text-decoration: underline; /* Still underlined on hover */
+}
+
+/* Sidebar Base Styles */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Hidden by default */
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  padding: 60px 20px 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar li {
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #333;
+  font-family: Helvetica, sans-serif;
+}
+
+/* Show Sidebar */
+#sidebar.active {
+  right: 0;
+}
+
+/* Menu hover style */
+.header-right {
+  cursor: pointer;
+}
+
+
+footer {
+  text-align: center;         /* Center text horizontally */
+  padding: 20px 0;            /* Add vertical space */
+  background-color: #ffffff;  /* Optional: light background */
+}
+
+footer a {
+  text-decoration: none;
+  color: #555;
+  font-family: Helvetica, sans-serif, 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #000;
+}
