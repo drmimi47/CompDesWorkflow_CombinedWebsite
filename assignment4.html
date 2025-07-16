@@ -6,7 +6,11 @@
   <title>Assignment 4</title>
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="d3style.css" />  
   
+  <!-- d3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
 </head>
 <body>
 
@@ -49,9 +53,21 @@
         <div class="scroll-text">
         <i>For this assignment you will be using the D3.js library for data visualization. 1. Begin in Github by pulling new files from the cdw-public repo: Running A Local Server Temporal Structures 2. Then follow the Running a Local Server instructions in the readme file. https://github.com/isohale/cdw-public/tree/main/Running%20a%20Local%20ServerLinks to an external site. 3. Temporal Structures in D3.js: For beginners, you can read through the tutorial to familiarize yourself with the basic concepts and syntax of D3. https://github.com/isohale/cdw-public/tree/main/Temporal%20StructuresLinks to an external site. 4. View the examples files and source code Select an example and change the data in the CSV file. You could modify the data as synthetic data. Or you could source another dataset with a different context and alter the visualization to suit. If using another dataset, make sure that it follows exactly the same format as the original CSV file. Always prioritize aesthetics, composition, color. Add a single D3 canvas to your website. For more advanced coders, explore the D3 library and develop another temporal visualization with data from a topic of your interest. 5. Add a link to your website with the D3 canvas added. 6. Additionally, describe a way that a temporal structure is used in your Precedent Study or how you might incorporate a temporal structure into your project. </i>
         </div>
+      </div>
     </div>
 
+    <h3>"Occlusion" Inspired D3.js Panel</h3>
 
+    <!-- D3 Visualization Container -->
+    <div id="viz"></div>
+
+    <!-- Additional Information -->
+    <div style="margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 5px;">
+      <h4>About This Visualization</h4>
+      <p>This D3.js visualization demonstrates <strong>temporal occlusion</strong> - how objects can be hidden over time by other objects in space. The circles represent data points from the CSV file, with larger circles potentially occluding (hiding) smaller ones that fall completely within their boundaries.</p>
+      
+      <p><strong>Temporal Structure Speculation:</strong> Occlusion represents a temporal concept because it shows how visibility changes based on layering order - what was visible at one "moment" may become hidden as objects are layered. This relates to how information architecture and spatial relationships evolve over time in design projects. For the precedent project this could be used to visualize the "pixels" made of potted plants and how they may have been overlapping in the digital planning process for the 20x20 image that was voted on.</p>
+    </div>
     
   </main>
 
@@ -60,6 +76,7 @@
 </footer>
 
     <script src="script.js"></script>
+    <script src="d3script.js"></script>
 
 </body>
 </html>
