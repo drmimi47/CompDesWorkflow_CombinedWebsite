@@ -6,6 +6,15 @@
   <title>Assignment 3 </title>
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- P5.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+
   
 </head>
 <body>
@@ -51,8 +60,39 @@
         </div>
     </div>
 
-<!-- Create div element -->
+    <!-- 2D Spatial Canvases (P5.js) -->
+    <section class="canvas-section">
+      <h2>2D Spatial Canvases</h2>
+      
+      <!-- 2D Canvas 1: Static Drawing with Primitive Shapes -->
+      <div class="canvas-container">
+        <h3>2D Canvas 1: Static Geometric Drawing</h3>
+        <div id="p5js-canvas-1" class="canvas-wrapper"></div>
+      </div>
+      
+      <!-- 2D Canvas 2: Interactive/Animated Drawing -->
+      <div class="canvas-container">
+        <h3>2D Canvas 2: Interactive Animation</h3>
+        <div id="p5js-canvas-2" class="canvas-wrapper"></div>
+      </div>
+    </section>
 
+    <!-- 3D Spatial Canvases (Three.js) -->
+    <section class="canvas-section">
+      <h2>3D Spatial Canvases</h2>
+      
+      <!-- 3D Canvas 1: Geometric Composition with Orbit Camera -->
+      <div class="canvas-container">
+        <h3>3D Canvas 1: Geometric Composition</h3>
+        <div id="threejs-canvas-1" class="canvas-wrapper"></div>
+      </div>
+      
+      <!-- 3D Canvas 2: Materials, Lighting, and Fog -->
+      <div class="canvas-container">
+        <h3>3D Canvas 2: Materials & Lighting</h3>
+        <div id="threejs-canvas-2" class="canvas-wrapper"></div>
+      </div>
+    </section>
 
   </main>
 
@@ -61,6 +101,12 @@
 </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Individual JavaScript files for each canvas -->
+    <script src="threejs-canvas-1.js"></script>
+    <script src="threejs-canvas-2.js"></script>
+    <script src="p5js-canvas-1.js"></script>
+    <script src="p5js-canvas-2.js"></script>
 
 </body>
 </html>
