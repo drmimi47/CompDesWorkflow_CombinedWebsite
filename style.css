@@ -122,3 +122,30 @@ footer a:hover {
   text-decoration: underline;
   color: #000;
 }
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  position: relative;
+}
+
+.scroll-wrapper {
+  display: flex;
+  animation: scroll-left 40s linear infinite;
+  width: max-content;
+}
+
+.scroll-text {
+  white-space: nowrap;
+  padding-right: 2rem; /* space between repeated text */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
