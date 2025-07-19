@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Metallic sphere
     const sphere = new THREE.Mesh(
         new THREE.SphereGeometry(1.2, 32, 32),
-        new THREE.MeshStandardMaterial({ color: 0xc0c0c0, metalness: 0.8, roughness: 0.2 })
+        new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: 0, roughness: 0.2 }) // Pure white
     );
     sphere.position.set(-4, 0, 0);
     sphere.castShadow = true;

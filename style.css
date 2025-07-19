@@ -1,3 +1,11 @@
+/* Black and white overlay for all canvas containers in assignment3.html */
+#p5js-canvas-1,
+#p5js-canvas-2,
+#threejs-canvas-1,
+#threejs-canvas-2 {
+  position: relative;
+  filter: hue-rotate(180deg) contrast(1.5) brightness(1);
+}
 
 /* Animation for navigation links on hover */
 p a:hover,
