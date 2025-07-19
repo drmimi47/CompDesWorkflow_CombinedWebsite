@@ -1,3 +1,50 @@
+
+/* Animation for navigation links on hover */
+p a:hover,
+a[href="index.html"]:hover,
+a[href="assignment3.html"]:hover,
+a[href="assignment4.html"]:hover,
+a[href="assignment5.html"]:hover,
+a[href="assignment6.html"]:hover,
+a[href="assignment7.html"]:hover,
+a[href="assignment8.html"]:hover,
+a[href="credits.html"]:hover {
+  animation: linkHover 0.3s cubic-bezier(0.4,0,0.2,1);
+  background: #D3D3D3;
+  color: #222 !important;
+}
+
+@keyframes linkHover {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+
+/* Ensure header-left and invert-toggle are white in inverted mode */
+body.inverted .header-left,
+body.inverted #invert-toggle { 
+  color: #fff !important;
+}
+/* Inverted color scheme for readability */
+body.inverted { 
+  background: #222222 !important;
+  color: #f5f5f5 !important;
+}
+/*invert settings */
+body.inverted a { 
+  color: #ffffff !important;
+}
+/*invert settings */
+body.inverted header, body.inverted footer { 
+  background: #222222 !important;
+  color: #ffffff !important;
+}
+ /*invert settings */
+body.inverted .logo {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 /* Add this at the very top of your CSS file */
 * {
   box-sizing: border-box;
@@ -42,7 +89,8 @@ header {
   flex: 1;
   text-align: right;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: .72rem;
+  margin-top: 3px;
   color: #222;
   font-family: Helvetica, sans-serif, monospace; /* Right text font */
 }
@@ -68,38 +116,8 @@ p a:hover {
   text-decoration: underline; /* Still underlined on hover */
 }
 
-/* Sidebar Base Styles */
-#sidebar {
-  position: fixed;
-  top: 0;
-  right: -300px; /* Hidden by default */
-  width: 300px;
-  height: 100%;
-  background-color: #ffffff;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-  padding: 60px 20px 20px;
-  transition: right 0.3s ease;
-  z-index: 999;
-}
 
-#sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#sidebar li {
-  margin: 20px 0;
-  font-size: 1rem;
-  color: #333;
-  font-family: Helvetica, sans-serif;
-}
-
-/* Show Sidebar */
-#sidebar.active {
-  right: 0;
-}
-
-/* Menu hover style */
+/* invert hover style */
 .header-right {
   cursor: pointer;
 }

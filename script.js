@@ -1,10 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menu-toggle");
-  const sidebar = document.getElementById("sidebar");
 
-  menuToggle.addEventListener("click", function () {
-    sidebar.classList.toggle("active");
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  // Invert toggle button functionality
+  const invertToggle = document.getElementById("invert-toggle");
+  if (invertToggle) {
+    invertToggle.addEventListener("click", function () {
+      document.body.classList.toggle("inverted");
+    });
+  }
 });
 
 // Set desired scroll speed (pixels per second)
