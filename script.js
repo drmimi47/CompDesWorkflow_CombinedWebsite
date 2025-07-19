@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         paragraph.style.animation = 'blink 1s infinite';
         
         let index = 0;
-        const speed = 50; // Adjust speed (lower = faster)
+        const speed = 40; // Adjust speed (lower = faster)
         
         function typeWriter() {
             if (index < text.length) {
