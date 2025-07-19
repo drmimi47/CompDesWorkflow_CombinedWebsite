@@ -1,0 +1,22 @@
+id,name,role,priority,zone,connections,size,color
+thermal_01,Thermal Sensor Array,Environmental Monitor,8,lobby,12,25,#ff6b6b
+motion_01,PIR Motion Detector,Movement Tracker,9,corridor,15,30,#4ecdc4
+sound_01,Acoustic Analyzer,Audio Processor,7,common_area,8,20,#45b7d1
+pressure_01,Floor Pressure Grid,Weight Distribution,6,entrance,10,22,#96ceb4
+air_01,Air Quality Monitor,Environmental Sensor,5,workspace,6,18,#feca57
+light_01,Ambient Light Sensor,Illumination Tracker,4,window_zone,7,16,#ff9ff3
+vibration_01,Structural Vibration,Building Response,7,foundation,9,24,#54a0ff
+proximity_01,Ultrasonic Proximity,Distance Measurement,8,furniture,11,26,#5f27cd
+humidity_01,Humidity Sensor,Moisture Detection,4,bathroom,5,15,#00d2d3
+temp_01,Temperature Grid,Climate Control,6,HVAC_zone,8,20,#ff6348
+co2_01,CO2 Monitor,Air Quality,5,meeting_room,6,18,#2ed573
+occupancy_01,Occupancy Calculator,Space Utilization,9,analytics_hub,14,32,#1e90ff
+privacy_filter,Privacy Protection Layer,Data Anonymization,10,security_core,16,35,#ff4757
+data_processor,Edge Computing Unit,Local Processing,9,server_room,13,28,#3742fa
+pattern_analyzer,Behavioral Patterns,Usage Analytics,8,cloud_interface,11,24,#2f3542
+environment_ctrl,Environmental Controller,System Response,7,control_room,10,22,#57606f
+alert_system,Alert Generator,Notification System,6,monitoring,8,20,#ffa502
+energy_monitor,Energy Consumption,Resource Tracking,5,utility,7,18,#ff6b81
+user_interface,Dashboard Interface,Human Interaction,7,admin_panel,9,23,#74b9ff
+network_hub,Communication Hub,Data Transmission,8,network_core,12,26,#6c5ce7
+maintenance_ai,Predictive Maintenance,System Health,6,diagnostic,8,20,#fdcb6e
