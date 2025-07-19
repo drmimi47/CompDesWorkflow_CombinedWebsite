@@ -199,3 +199,40 @@ footer a:hover {
     z-index: -1;
     pointer-events: none;
 } */
+
+/* FOR ASSIGNMENT 05 KEY*/
+
+.legend {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Helvetica;
+    color: white;
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid #333;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.legend-text {
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+/* */
