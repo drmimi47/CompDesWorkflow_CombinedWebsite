@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Object 05</title>
 
-  <link rel="stylesheet" href="style.css" />
-  
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />  
+
 </head>
 <body>
 
@@ -31,9 +34,67 @@
     <a href="credits.html">Credits - Tools and Resources</a><br>
     </p>
     
-    <p>
-      <em>...under construction.</em>
-    </p>
+    <div class="scroll-container">
+      <div class="scroll-wrapper">
+        <div class="scroll-text">
+        <i>For this assignment you will use the Firebase cloud server service for hosting data storage to collect poll data. 1. Begin in Github by pulling new files from the cdw-public repo: Engagement Components 2. Engagement Components with Firebase: For beginners, you can read through the code snippets to familiarize yourself with the basic concepts and syntax of user interfaces and simple engagement components. https://github.com/isohale/cdw-public/tree/main/Engagement%20Components/ExamplesLinks to an external site. 3. Set up a free Firebase account and add the configuration code to the example file so it is are connected to your own Firebase account. 4. Based on the example file "poll-app.js" - create your own poll in your website. Decide what question you want to ask and want kind of data you want to collect. Consider the potential longer-term ethics of this kind of data collection. Add a single engagement poll to your website. Make sure that Firebase is connected and aggregating data from the poll. 5. Add a link to your website to Courseworks. </i>
+        </div>
+        <div class="scroll-text">
+        <i>For this assignment you will use the Firebase cloud server service for hosting data storage to collect poll data. 1. Begin in Github by pulling new files from the cdw-public repo: Engagement Components 2. Engagement Components with Firebase: For beginners, you can read through the code snippets to familiarize yourself with the basic concepts and syntax of user interfaces and simple engagement components. https://github.com/isohale/cdw-public/tree/main/Engagement%20Components/ExamplesLinks to an external site. 3. Set up a free Firebase account and add the configuration code to the example file so it is are connected to your own Firebase account. 4. Based on the example file "poll-app.js" - create your own poll in your website. Decide what question you want to ask and want kind of data you want to collect. Consider the potential longer-term ethics of this kind of data collection. Add a single engagement poll to your website. Make sure that Firebase is connected and aggregating data from the poll. 5. Add a link to your website to Courseworks. </i>
+        </div>
+    </div>
+
+    <h3>What is Your Dominant hand?</h3>
+
+    <div class="poll-container">
+      
+      <!-- Vote buttons with inline styling -->
+      <div class="vote-buttons">
+        <button class="vote-btn vote-yes" id="vote-yes" 
+                style="background-color: #4CAF50; color: white; padding: 15px 25px; border: none; border-radius: 8px; font-size: 16px; font-weight: 500; cursor: pointer; display: flex; flex-direction: column; align-items: center; min-width: 120px; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
+                onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)';"
+                onmouseout="this.style.backgroundColor='#4CAF50'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)';">
+          <span class="vote-text" style="margin-bottom: 8px; font-size: 16px; font-weight: 600;">Left</span>
+          <span class="vote-count" id="yes-count" style="background: rgba(255,255,255,0.3); padding: 4px 12px; border-radius: 15px; font-size: 20px; font-weight: 700; min-width: 30px; text-align: center;">0</span>
+        </button>
+        
+        <button class="vote-btn vote-no" id="vote-no"
+                style="background-color: #f44336; color: white; padding: 15px 25px; border: none; border-radius: 8px; font-size: 16px; font-weight: 500; cursor: pointer; display: flex; flex-direction: column; align-items: center; min-width: 120px; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
+                onmouseover="this.style.backgroundColor='#d32f2f'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)';"
+                onmouseout="this.style.backgroundColor='#f44336'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)';">
+          <span class="vote-text" style="margin-bottom: 8px; font-size: 16px; font-weight: 600;">Right</span>
+          <span class="vote-count" id="no-count" style="background: rgba(255,255,255,0.3); padding: 4px 12px; border-radius: 15px; font-size: 20px; font-weight: 700; min-width: 30px; text-align: center;">0</span>
+        </button>
+
+        <button class="vote-btn vote-maybe" id="vote-maybe"
+                style="background-color: #2196F3; color: white; padding: 15px 25px; border: none; border-radius: 8px; font-size: 16px; font-weight: 500; cursor: pointer; display: flex; flex-direction: column; align-items: center; min-width: 120px; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
+                onmouseover="this.style.backgroundColor='#1976D2'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)';"
+                onmouseout="this.style.backgroundColor='#2196F3'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)';">
+          <span class="vote-text" style="margin-bottom: 8px; font-size: 16px; font-weight: 600;">Ambidextrous</span>
+          <span class="vote-count" id="maybe-count" style="background: rgba(255,255,255,0.3); padding: 4px 12px; border-radius: 15px; font-size: 20px; font-weight: 700; min-width: 30px; text-align: center;">0</span>
+        </button>
+      </div>
+      
+      <!-- Total votes display -->
+      <div class="total-votes">
+        <p>Total votes: <span id="total-votes">0</span></p>
+      </div>
+    </div>
+
+    <!-- Status Display -->
+    <div class="section-title">Connection Status</div>
+    <div id="connection-status" class="status-display">
+      <p>Connecting to Firebase...</p>
+    </div>
+
+        <!-- Additional Information -->
+    <div style="margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 5px;">
+      <h4>About This Poll</h4>
+      <p>This poll collects data about users' dominant hand preference, categorizing respondents as left-handed, right-handed, or ambidextrous. It demonstrates real-time data collection and synchronization using Firebase, allowing multiple users to vote simultaneously while implementing rate limiting to prevent spam.</p>
+      
+      <p><strong>Potential Long-term Ethics of Data Collection: </strong>Even simple demographic data, like handedness, raises ethical concerns when collected over time. It can contribute to biological profiling or discrimination due to links with neurological and genetic traits. Users may consent to a poll without realizing the data could later be aggregated, sold, or used for unrelated purposes. Left-handed individuals, being a minority, risk being misrepresented or ignored in analysis. Once stored, such data is hard to delete and may be cross-referenced with other datasets, increasing privacy risks. Seemingly harmless data can enable subtle forms of discrimination in areas like employment or insurance. Ethical data collection must consider long-term implications and ensure informed user consent.</p>
+    
+
   </main>
 
 <footer>
@@ -41,6 +102,49 @@
 </footer>
 
     <script src="script.js"></script>
+    <script src="poll-app.js"></script>
+
+    <!-- Additional inline styles for the vote buttons container and disabled state -->
+    <style>
+    .vote-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .poll-container {
+      text-align: center;
+      padding: 30px;
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      margin: 30px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Handle disabled state for buttons */
+    button:disabled {
+      opacity: 0.6 !important;
+      cursor: not-allowed !important;
+      transform: none !important;
+    }
+    
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .vote-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      .vote-buttons button {
+        min-width: 200px !important;
+      }
+    }
+    </style>
+
+
 
 </body>
 </html>
